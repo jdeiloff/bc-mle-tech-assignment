@@ -1,7 +1,8 @@
 [project]
 name = "churn-model"
 version = "0.1.0"
-description = "Add your description here"
+description = "Made for a BC MLE tech assessment, this package provides a churn prediction model using survival analysis techniques."
+author = "Jonathan Deiloff <jdeiloff@gmail.com>"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
