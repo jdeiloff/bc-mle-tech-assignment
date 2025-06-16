@@ -35,7 +35,7 @@ class XGBoostChurnPredictor:
         # Override defaults with any user-provided params
         final_params = {**default_params, **xgb_params}
 
-        self.model = xgb.XGBoostClassifier(**final_params)
+        self.model = xgb.XGBClassifier(**final_params)
         self._features = None
         self._categorical_cols = ["brand_id", "player_reg_product"]
         self._one_hot_encoded_cols = None
@@ -205,11 +205,10 @@ class XGBoostChurnPredictor:
 
 if __name__ == "__main__":
     print("--- XGBoost Churn Predictor Demonstration ---")
-
     # 1. Load data
     try:
         df = pd.read_excel(
-            "../data/sample_data__technical_assessment.xlsx", sheet_name="Sheet1"
+            "./data/sample_data__technical_assessment.xlsx", sheet_name="Sheet1"
         )
         date_cols = ["activity_month", "reg_date", "ftd_date", "qp_date"]
         for col in date_cols:
@@ -230,7 +229,7 @@ if __name__ == "__main__":
     predictor.evaluate(df_test)
 
     # 5. Save the model artifact
-    model_path = "../models/xgboost_churn_model.joblib"
+    model_path = "./models/xgboost_churn_model.joblib"
     predictor.save(model_path)
 
     # 6. Load the model and make a prediction on a sample
