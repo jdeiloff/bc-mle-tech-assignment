@@ -4,7 +4,7 @@
 
 To monitor the model's performance as new data arrives, I would implement a robust MLOps monitoring strategy:
 ### Performance Tracking: 
-Automate the re-calculation of key metrics on new data batches (e.g., daily or weekly). The primary metric to track would be the Concordance Index (C-index). A dashboard would visualize the C-index over time to spot degradation. Grafana is a good tool for this.
+Automate the re-calculation of key metrics on new data batches (e.g., daily or weekly). The primary metric to track would be the Concordance Index (C-index). A dashboard would visualize the C-index over time to spot degradation. Grafana is a good tool for this and MLFlow for metrics tracking.
 
 ### Drift Detection:
 - Data Drift: Monitor the statistical distributions of key input features (total_handle, total_deposit, reg_qp_duration). A significant shift (e.g., a new marketing campaign drastically changes the average first deposit) could invalidate the model.

@@ -1,6 +1,6 @@
 # BetterCollective MLE Tech Assignment
 
-Solution proposed by [Jonathan Deiloff](www.github.com/jdeiloff).
+Solution proposed by [Jonathan Deiloff](https://github.com/jdeiloff).
 
 ## Repository Structure
 
